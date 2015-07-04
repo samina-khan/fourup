@@ -1,3 +1,10 @@
+<!--
+Copyright (c) 2015 Samina Khanam
+
+This source file is licensed under the "MIT license”.
+Please see the file COPYING in this distribution
+for license terms.
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
