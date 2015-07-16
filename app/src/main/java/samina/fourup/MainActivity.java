@@ -43,6 +43,9 @@ public class MainActivity extends Activity implements GlobalConstants{
                 Toast toast2 = Toast.makeText(getApplicationContext(), "Play Pass",
                         Toast.LENGTH_SHORT);
                 toast2.show();
+                Intent passIntent = new Intent(v.getContext(), PlayPass.class);
+                //singleIntent.putExtra("Round",Round);
+                startActivity(passIntent);
             }
         });
 

@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="play_AI">AI mode</string>
     <string name="play_pass">Pass \'n\' Play</string>
+    <string name="title_activity_play_pass">PlayPass</string>
 
 </resources>
