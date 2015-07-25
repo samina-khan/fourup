@@ -16,5 +16,12 @@ public interface GlobalConstants {
     public static final int GCPlayPass = 2;
     public static final int GCPlayOnline = 3;
 
+    public static final int GCBlack = 0;
+    public static final int GCRed = 1;
+    public static final int GCYellow = 2;
+
+    public static final int standardNumRows = 6;
+    public static final int standardNumCols = 7;
+
 
 }

@@ -26,149 +26,230 @@ for license terms.
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:shrinkColumns="*">
-
         <TableRow >
-            <ImageView android:clickable="true"
-            android:src="@drawable/black"
-                android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole00"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole01"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole02"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole03"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole04"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole05"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole06"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
         </TableRow>
-        <TableRow android:layout_width="match_parent">
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-        </TableRow>
-
-
         <TableRow >
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole10"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole11"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole12"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole13"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole14"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole15"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole16"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
         </TableRow>
-        <TableRow android:layout_width="match_parent">
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
-                android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-        </TableRow>
-
         <TableRow >
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole20"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole21"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole22"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole23"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole24"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole25"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole26"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
         </TableRow>
-        <TableRow android:layout_width="match_parent">
-            <ImageView android:clickable="true"
+        <TableRow >
+            <ImageView
+                android:id="@+id/hole30"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole31"
+                android:clickable="true"
                 android:src="@drawable/black"
                 android:adjustViewBounds="true" />
-            <ImageView android:clickable="true"
+            <ImageView
+                android:id="@+id/hole32"
+                android:clickable="true"
                 android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole33"
+                android:clickable="true"
                 android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole34"
+                android:clickable="true"
                 android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole35"
+                android:clickable="true"
                 android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
-            <ImageView android:clickable="true"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole36"
+                android:clickable="true"
                 android:src="@drawable/black"
-                android:adjustViewBounds="true"/>
+                android:adjustViewBounds="true" />
+        </TableRow>
+        <TableRow >
+            <ImageView
+                android:id="@+id/hole40"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole41"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole42"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole43"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole44"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole45"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole46"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+        </TableRow>
+        <TableRow >
+            <ImageView
+                android:id="@+id/hole50"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole51"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole52"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole53"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole54"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole55"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
+            <ImageView
+                android:id="@+id/hole56"
+                android:clickable="true"
+                android:src="@drawable/black"
+                android:adjustViewBounds="true" />
         </TableRow>
     </TableLayout>
+
     </LinearLayout>
 </LinearLayout>
 
