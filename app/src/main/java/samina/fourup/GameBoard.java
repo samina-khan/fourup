@@ -7,15 +7,33 @@ for license terms.
 */
 package samina.fourup;
 
+import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 public class GameBoard implements GlobalConstants{
 
-        Hole[][] holes;
-        private GameBoard(){}
+    Hole[][] holes;
+    int turn = GCRed;
+    int[] colors = new int[2];
 
-        GameBoard(int numrows, int numcols){
-               holes = new Hole[numrows][numcols];
+    private GameBoard(){}
+
+    GameBoard(int numrows, int numcols){
+           holes = new Hole[numrows][numcols];
+    }
+
+    public void onclick(ImageView i){
+        i.setImageResource(colors[turn]);
+        toggleTurn();
+        for(Hole[] array : holes){
+            for(Hole h : array){
+                if(h.v == i) h.filled = turn;
+            }
         }
 
+    }
+
+    private void toggleTurn(){
+        turn = (turn == GCRed)?  GCYellow : GCRed;
+    }
 }

@@ -8,6 +8,7 @@ for license terms.
 package samina.fourup;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import android.widget.ImageView;
 
 public class PlayPass extends Activity implements View.OnClickListener,GlobalConstants{
     GameBoard gameboard = new GameBoard(standardNumRows,standardNumCols);
+
     GestureDetector gestureDetector;
 
     @Override
@@ -101,7 +103,9 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
 
             }
         }
-
+        //Drawable[] colors = new Drawable[]{getDrawable(R.drawable.red),getDrawable(R.drawable.yellow)};
+        int[] colors = new int[]{R.drawable.red,R.drawable.yellow};
+        gameboard.colors = colors;
     }
 
 
@@ -130,6 +134,7 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
     @Override
     public void onClick(View v) {
                 ImageView i = (ImageView) v;
-                i.setImageResource(R.drawable.red);
+                gameboard.onclick(i);
+                //i.setImageResource(R.drawable.red);
     }
 }
