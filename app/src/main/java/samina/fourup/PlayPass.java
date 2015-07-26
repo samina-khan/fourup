@@ -133,8 +133,14 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
 
     @Override
     public void onClick(View v) {
-                ImageView i = (ImageView) v;
-                gameboard.onclick(i);
+        if(gameboard.winner == GCBlack){
+            ImageView i = (ImageView) v;
+            gameboard.onclick(i);
+            if(gameboard.checkWin() != GCBlack){
+                System.out.println("Winner is "+gameboard.winner);
+            }
+        }
+
                 //i.setImageResource(R.drawable.red);
     }
 }
