@@ -16,6 +16,7 @@ public class GameBoard implements GlobalConstants{
     int turn = GCRed;
     int winner = GCBlack;
     int[] colors = new int[2];
+    public boolean gameover = false;
 
     private GameBoard(){}
 
@@ -66,6 +67,7 @@ public class GameBoard implements GlobalConstants{
                         holes[i][j].filled == holes[i+3][j].filled){
 
                     winner = holes[i][j].filled;
+                    gameover = true;
                     System.out.println("Won! "+winner);
                 }
             }
@@ -80,6 +82,7 @@ public class GameBoard implements GlobalConstants{
                         holes[i][j].filled == holes[i][j+3].filled){
 
                     winner = holes[i][j].filled;
+                    gameover = true;
                     System.out.println("Won! "+winner);
                 }
             }
@@ -95,6 +98,7 @@ public class GameBoard implements GlobalConstants{
                         holes[i][j].filled == holes[i+3][j+3].filled){
 
                     winner = holes[i][j].filled;
+                    gameover = true;
                     System.out.println("Won! "+winner);
                 }
             }
@@ -110,6 +114,7 @@ public class GameBoard implements GlobalConstants{
                         holes[i][j].filled == holes[i-3][j+3].filled){
 
                     winner = holes[i][j].filled;
+                    gameover = true;
                     System.out.println("Won! "+winner);
                 }
             }
@@ -120,5 +125,24 @@ public class GameBoard implements GlobalConstants{
 
     private void toggleTurn(){
         turn = (turn == GCRed)?  GCYellow : GCRed;
+    }
+
+    public boolean checkBoardFull() {
+        boolean boardfull = true;
+
+        for(Hole[] array: holes){
+            for(Hole h: array){
+                if(h.filled == GCBlack){
+                    boardfull = false;
+                    break;
+                }
+            }
+        }
+        if(boardfull)
+        {
+            gameover = true;
+        }
+
+        return boardfull;
     }
 }
