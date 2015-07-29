@@ -10,7 +10,7 @@ for license terms.
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@android:color/black"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="samina.fourup.PlayPass">
 
 
@@ -69,226 +69,694 @@ for license terms.
         android:shrinkColumns="*"
         android:layout_gravity="bottom">
         <TableRow >
-            <ImageView
+            <FrameLayout>
+                <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/hole00"
                 android:clickable="true"
                 android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole01"
+                <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/overlay00"
                 android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole01"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay01"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole02"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay02"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
             <ImageView
-                android:id="@+id/hole02"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/hole03"
                 android:clickable="true"
                 android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/overlay03"
+                android:clickable="true"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+        </FrameLayout>
+        <FrameLayout>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/hole04"
                 android:clickable="true"
                 android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/overlay04"
+                android:clickable="true"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+        </FrameLayout>
+        <FrameLayout>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/hole05"
                 android:clickable="true"
                 android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/overlay05"
+                android:clickable="true"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+        </FrameLayout>
+        <FrameLayout>
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:id="@+id/hole06"
                 android:clickable="true"
                 android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/overlay06"
+                android:clickable="true"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"/>
+        </FrameLayout>
         </TableRow>
         <TableRow >
-            <ImageView
-                android:id="@+id/hole10"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole11"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole12"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole13"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole14"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole15"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole16"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole10"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay10"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole11"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay11"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole12"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay12"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole13"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay13"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole14"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay14"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole15"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay15"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole16"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay16"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
         </TableRow>
         <TableRow >
-            <ImageView
-                android:id="@+id/hole20"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole21"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole22"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole23"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole24"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole25"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole26"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole20"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay20"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole21"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay21"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole22"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay22"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole23"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay23"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole24"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay24"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole25"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay25"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole26"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay26"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
         </TableRow>
         <TableRow >
-            <ImageView
-                android:id="@+id/hole30"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole31"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole32"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole33"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole34"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole35"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole36"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole30"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay30"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole31"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay31"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole32"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay32"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole33"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay33"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole34"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay34"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole35"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay35"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole36"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay36"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
         </TableRow>
         <TableRow >
-            <ImageView
-                android:id="@+id/hole40"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole41"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole42"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole43"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole44"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole45"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole46"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole40"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay40"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole41"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay41"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole42"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay42"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole43"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay43"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole44"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay44"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole45"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay45"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole46"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay46"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
         </TableRow>
         <TableRow >
-            <ImageView
-                android:id="@+id/hole50"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole51"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole52"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole53"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole54"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole55"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
-            <ImageView
-                android:id="@+id/hole56"
-                android:clickable="true"
-                android:src="@drawable/blacktrans"
-                android:adjustViewBounds="true" />
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole50"
+
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay50"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole51"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay51"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole52"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay52"
+                    android:clickable="true"
+
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole53"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay53"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole54"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay54"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole55"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay55"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+            <FrameLayout>
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/hole56"
+                    android:clickable="true"
+                    android:src="@drawable/blacktrans"
+                    android:adjustViewBounds="true" />
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/overlay56"
+                    android:clickable="true"
+                    android:adjustViewBounds="true"
+                    android:visibility="invisible"/>
+            </FrameLayout>
         </TableRow>
     </TableLayout>
 

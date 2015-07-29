@@ -8,6 +8,7 @@ for license terms.
 package samina.fourup;
 
 import android.graphics.drawable.Drawable;
+import android.view.View;
 import android.widget.ImageView;
 
 public class GameBoard implements GlobalConstants{
@@ -16,6 +17,7 @@ public class GameBoard implements GlobalConstants{
     int turn = GCRed;
     int winner = GCBlack;
     int[] colors = new int[2];
+    int[] overlays = new int[2];
     public boolean gameover = false;
 
     private GameBoard(){}
@@ -46,6 +48,7 @@ public class GameBoard implements GlobalConstants{
             if(holes[i][theColumn].filled == GCBlack){
                 holes[i][theColumn].filled = turn;
                 holes[i][theColumn].v.setImageResource(colors[turn]);
+                holes[i][theColumn].overlay.setImageResource(overlays[turn]);
                 toggleTurn();
                 break;
             }
@@ -68,6 +71,11 @@ public class GameBoard implements GlobalConstants{
                     winner = holes[i][j].filled;
                     gameover = true;
 
+                    holes[i][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i+1][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i+2][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i+3][j].overlay.setVisibility(View.VISIBLE);
+
                     System.out.println("Won! "+winner);
                 }
             }
@@ -83,6 +91,12 @@ public class GameBoard implements GlobalConstants{
 
                     winner = holes[i][j].filled;
                     gameover = true;
+
+                    holes[i][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i][j+1].overlay.setVisibility(View.VISIBLE);
+                    holes[i][j+2].overlay.setVisibility(View.VISIBLE);
+                    holes[i][j+3].overlay.setVisibility(View.VISIBLE);
+
                     System.out.println("Won! "+winner);
                 }
             }
@@ -99,6 +113,12 @@ public class GameBoard implements GlobalConstants{
 
                     winner = holes[i][j].filled;
                     gameover = true;
+
+                    holes[i][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i+1][j+1].overlay.setVisibility(View.VISIBLE);
+                    holes[i+2][j+2].overlay.setVisibility(View.VISIBLE);
+                    holes[i+3][j+3].overlay.setVisibility(View.VISIBLE);
+
                     System.out.println("Won! "+winner);
                 }
             }
@@ -115,6 +135,12 @@ public class GameBoard implements GlobalConstants{
 
                     winner = holes[i][j].filled;
                     gameover = true;
+
+                    holes[i][j].overlay.setVisibility(View.VISIBLE);
+                    holes[i-1][j+1].overlay.setVisibility(View.VISIBLE);
+                    holes[i-2][j+2].overlay.setVisibility(View.VISIBLE);
+                    holes[i-3][j+3].overlay.setVisibility(View.VISIBLE);
+
                     System.out.println("Won! "+winner);
                 }
             }

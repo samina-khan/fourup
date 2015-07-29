@@ -13,5 +13,6 @@ import android.widget.ImageView;
 
 public class Hole {
     ImageView v;
+    ImageView overlay;
     int filled;
 }

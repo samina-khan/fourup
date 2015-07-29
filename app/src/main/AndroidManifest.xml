@@ -26,8 +26,8 @@ for license terms.
         </activity>
         <activity
             android:name=".PlayPass"
-            android:label="@string/title_activity_play_pass" >
-        </activity>
+            android:label="@string/title_activity_play_pass"
+            android:theme="@android:style/Theme.Translucent"/>
     </application>
 
 </manifest>
