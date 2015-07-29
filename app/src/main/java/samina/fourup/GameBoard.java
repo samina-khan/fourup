@@ -42,9 +42,8 @@ public class GameBoard implements GlobalConstants{
 
         //Fill the bottom-most available slot in that column - i.e simulate disk drop to bottom
         for (int i = standardNumRows - 1; i >= 0 ; i--){
-            System.out.println("[i][theColumn]: ["+i+"]["+theColumn+"]");
+
             if(holes[i][theColumn].filled == GCBlack){
-                System.out.println("i:"+i);
                 holes[i][theColumn].filled = turn;
                 holes[i][theColumn].v.setImageResource(colors[turn]);
                 toggleTurn();
@@ -68,6 +67,7 @@ public class GameBoard implements GlobalConstants{
 
                     winner = holes[i][j].filled;
                     gameover = true;
+
                     System.out.println("Won! "+winner);
                 }
             }
@@ -144,5 +144,9 @@ public class GameBoard implements GlobalConstants{
         }
 
         return boardfull;
+    }
+
+    public int getTurn() {
+        return turn;
     }
 }

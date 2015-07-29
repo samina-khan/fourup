@@ -10,14 +10,55 @@ for license terms.
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="samina.fourup.PlayPass">
 
-    <!--<TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />-->
+
 <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/linearLayout">
+    android:id="@+id/linearLayout"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:text="Pass and Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style = "@style/TitleText"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/PlayerRed"
+                android:text="Player 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                style = "@style/RedSubTitleText"/>
+
+            <!-- Putting an empty view in the middle when align-right doesn't seem to work:
+            Hack picked up online from
+            http://stackoverflow.com/questions/6992804/how-to-right-align-widget-in-horizontal-linear-layout-android -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/PlayerYellow"
+                android:text="Player 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                style = "@style/SubTitleText"/>
+        </LinearLayout>
+        </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -25,227 +66,228 @@ for license terms.
         android:id="@+id/tableLayout1"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:shrinkColumns="*">
+        android:shrinkColumns="*"
+        android:layout_gravity="bottom">
         <TableRow >
             <ImageView
                 android:id="@+id/hole00"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole01"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole02"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole03"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole04"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole05"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole06"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
         <TableRow >
             <ImageView
                 android:id="@+id/hole10"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole11"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole12"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole13"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole14"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole15"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole16"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
         <TableRow >
             <ImageView
                 android:id="@+id/hole20"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole21"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole22"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole23"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole24"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole25"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole26"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
         <TableRow >
             <ImageView
                 android:id="@+id/hole30"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole31"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole32"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole33"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole34"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole35"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole36"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
         <TableRow >
             <ImageView
                 android:id="@+id/hole40"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole41"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole42"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole43"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole44"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole45"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole46"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
         <TableRow >
             <ImageView
                 android:id="@+id/hole50"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole51"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole52"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole53"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole54"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole55"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
             <ImageView
                 android:id="@+id/hole56"
                 android:clickable="true"
-                android:src="@drawable/black"
+                android:src="@drawable/blacktrans"
                 android:adjustViewBounds="true" />
         </TableRow>
     </TableLayout>

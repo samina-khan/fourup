@@ -8,6 +8,7 @@ for license terms.
 package samina.fourup;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -17,10 +18,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class PlayPass extends Activity implements View.OnClickListener,GlobalConstants{
     GameBoard gameboard = new GameBoard(standardNumRows,standardNumCols);
+    TextView playerRed;
+    TextView playerYellow;
 
     GestureDetector gestureDetector;
 
@@ -28,7 +32,8 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.playpass);
-
+        playerRed = (TextView) findViewById(R.id.PlayerRed);
+        playerYellow = (TextView) findViewById(R.id.PlayerYellow);
 
         setUpGameBoard();
 
@@ -104,7 +109,7 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
             }
         }
         //Drawable[] colors = new Drawable[]{getDrawable(R.drawable.red),getDrawable(R.drawable.yellow)};
-        int[] colors = new int[]{R.drawable.red,R.drawable.yellow};
+        int[] colors = new int[]{R.drawable.redtrans,R.drawable.yellowtrans};
         gameboard.colors = colors;
     }
 
@@ -136,6 +141,16 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
         if(!gameboard.gameover){
             ImageView i = (ImageView) v;
             gameboard.onclick(i);
+
+            if(gameboard.getTurn() == GCRed){
+                playerRed.setTextColor(this.getResources().getColor(R.color.red));
+                playerYellow.setTextColor(Color.WHITE);
+            }
+            else{
+                playerRed.setTextColor(Color.WHITE);
+                playerYellow.setTextColor(this.getResources().getColor(R.color.yellow));
+            }
+
             if(gameboard.checkWin() != GCBlack){
                 System.out.println("Winner is "+gameboard.winner);
             }
@@ -143,7 +158,5 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
                 System.out.println("Tied!");
             }
         }
-
-                //i.setImageResource(R.drawable.red);
     }
 }
