@@ -8,6 +8,7 @@ for license terms.
 package samina.fourup;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -34,6 +35,12 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
         setContentView(R.layout.playpass);
         playerRed = (TextView) findViewById(R.id.PlayerRed);
         playerYellow = (TextView) findViewById(R.id.PlayerYellow);
+
+        TextView playerRedWins = (TextView) findViewById(R.id.PlayerRedWins);
+        TextView playerYellowWins = (TextView) findViewById(R.id.PlayerYellowWins);
+
+        playerRedWins.setText(Integer.toString(Arbitrator.numRedWon));
+        playerYellowWins.setText(Integer.toString(Arbitrator.numYellowWon));
 
         setUpGameBoard();
 
@@ -195,12 +202,22 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
                 playerYellow.setTextColor(this.getResources().getColor(R.color.yellow));
             }
 
-            if(gameboard.checkWin() != GCBlack){
-                System.out.println("Winner is "+gameboard.winner);
+            if(gameboard.checkWin() != GCBlack || gameboard.checkBoardFull()){
+                if(Arbitrator.onGameEnd(gameboard.winner)==KeepGoing) {
+                    Intent passIntent = new Intent(v.getContext(), PlayPass.class);
+                    startActivity(passIntent);
+                }
+                else{
+                    /*
+                    Intent endIntent = new Intent(v.getContext(), PlayPass.class);
+                    startActivity(endIntent);*/
+                }
             }
-            else if(gameboard.checkBoardFull()){
-                System.out.println("Tied!");
-            }
+
         }
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

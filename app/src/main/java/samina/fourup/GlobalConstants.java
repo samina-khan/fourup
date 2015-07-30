@@ -22,5 +22,13 @@ public interface GlobalConstants {
     public static final int standardNumRows = 6;
     public static final int standardNumCols = 7;
 
+    public static final int maxMatches = 3;
+
+    public static final int KeepGoing = -1;
+    public static final int RedWins = 0;
+    public static final int YellowWins = 1;
+    public static final int Tied = 2;
+
+
 
 }

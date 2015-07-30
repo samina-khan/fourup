@@ -24,7 +24,7 @@ for license terms.
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
-            android:text="Pass and Play"
+            android:text="FourUp!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -33,13 +33,26 @@ for license terms.
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="vertical">
+                <TextView
                 android:id="@+id/PlayerRed"
                 android:text="Player 1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
                 style = "@style/RedSubTitleText"/>
+                <TextView
+                    android:id="@+id/PlayerRedWins"
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    style = "@style/SubTitleText"/>
+            </LinearLayout>
+
 
             <!-- Putting an empty view in the middle when align-right doesn't seem to work:
             Hack picked up online from
@@ -49,14 +62,27 @@ for license terms.
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 />
-
-            <TextView
-                android:id="@+id/PlayerYellow"
-                android:text="Player 2"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                style = "@style/SubTitleText"/>
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/PlayerYellow"
+                    android:text="Player 2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    style = "@style/SubTitleText"/>
+                <TextView
+                    android:id="@+id/PlayerYellowWins"
+                    android:text="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    style = "@style/SubTitleText"/>
+                </LinearLayout>
+
         </LinearLayout>
         </LinearLayout>
     <LinearLayout

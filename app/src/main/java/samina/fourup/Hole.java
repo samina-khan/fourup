@@ -11,7 +11,7 @@ import android.content.Context;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class Hole {
+public class Hole implements GlobalConstants{
     ImageView v;
     ImageView overlay;
     int filled;
