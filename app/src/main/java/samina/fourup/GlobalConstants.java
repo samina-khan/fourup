@@ -18,6 +18,8 @@ public interface GlobalConstants {
     public static final int GCYellow = 1;
     public static final int GCBlack = 2;
 
+    public static final String[] Players = {"Player 1","Player 2", "nobody"};
+
 
     public static final int standardNumRows = 6;
     public static final int standardNumCols = 7;

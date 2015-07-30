@@ -8,6 +8,8 @@ for license terms.
 package samina.fourup;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -21,11 +23,14 @@ import android.widget.ImageView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static android.app.PendingIntent.getActivity;
+
 
 public class PlayPass extends Activity implements View.OnClickListener,GlobalConstants{
     GameBoard gameboard = new GameBoard(standardNumRows,standardNumCols);
     TextView playerRed;
     TextView playerYellow;
+    AlertDialog.Builder builder;
 
     GestureDetector gestureDetector;
 
@@ -33,6 +38,7 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.playpass);
+        builder = new AlertDialog.Builder(this);
         playerRed = (TextView) findViewById(R.id.PlayerRed);
         playerYellow = (TextView) findViewById(R.id.PlayerYellow);
 
@@ -158,8 +164,8 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
             }
         }
         //Drawable[] colors = new Drawable[]{getDrawable(R.drawable.red),getDrawable(R.drawable.yellow)};
-        int[] colors = new int[]{R.drawable.redtrans,R.drawable.yellowtrans};
-        int[] overlays = new int[]{R.drawable.redtransgreenover,R.drawable.yellowtransgreenover};
+        int[] colors = new int[]{R.drawable.red,R.drawable.yellow};
+        int[] overlays = new int[]{R.drawable.redhighlight,R.drawable.yellowhighlight};
         gameboard.colors = colors;
         gameboard.overlays = overlays;
     }
@@ -204,8 +210,27 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
 
             if(gameboard.checkWin() != GCBlack || gameboard.checkBoardFull()){
                 if(Arbitrator.onGameEnd(gameboard.winner)==KeepGoing) {
-                    Intent passIntent = new Intent(v.getContext(), PlayPass.class);
-                    startActivity(passIntent);
+                    builder.setPositiveButton("Play next round", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent passIntent = new Intent(PlayPass.this, PlayPass.class);
+                            startActivity(passIntent);
+                        }
+                    });
+                    AlertDialog alertDialog = builder.create();
+                    if(Players[gameboard.winner] != "nobody"){
+                        alertDialog.setTitle("Good Job, "+Players[gameboard.winner]+"!");
+                        //image from http://www.clker.com/cliparts/R/A/q/t/b/L/gold-medal-hi.png
+                        alertDialog.setIcon(R.drawable.medal);
+                    }
+                    else{
+                        alertDialog.setTitle("Aww, we have a tie.");
+                        http://pngimg.com/upload/tie_PNG8179.png
+                        alertDialog.setIcon(R.drawable.tiesmall);
+                    }
+
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Players[gameboard.winner]+". Three rounds to declare a winner!");
+                    alertDialog.show();
+
                 }
                 else{
                     /*
