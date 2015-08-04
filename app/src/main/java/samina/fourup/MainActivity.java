@@ -31,20 +31,15 @@ public class MainActivity extends Activity implements GlobalConstants{
         btn_AI = (Button) findViewById(R.id.btnAI);
         btn_AI.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast toast1 = Toast.makeText(getApplicationContext(), "Play AI",
-                        Toast.LENGTH_SHORT);
-                toast1.show();
+                Intent passIntent = new Intent(v.getContext(), PlayAI.class);
+                startActivity(passIntent);
             }
         });
 
         btn_Pass = (Button) findViewById(R.id.btnPass);
         btn_Pass.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast toast2 = Toast.makeText(getApplicationContext(), "Play Pass",
-                        Toast.LENGTH_SHORT);
-                toast2.show();
                 Intent passIntent = new Intent(v.getContext(), PlayPass.class);
-                //singleIntent.putExtra("Round",Round);
                 startActivity(passIntent);
             }
         });

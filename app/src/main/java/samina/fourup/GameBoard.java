@@ -19,11 +19,17 @@ public class GameBoard implements GlobalConstants{
     int[] colors = new int[2];
     int[] overlays = new int[2];
     public boolean gameover = false;
+    AI ai;
+    int mode = GCPlayPass;
 
     private GameBoard(){}
 
-    GameBoard(int numrows, int numcols){
+    GameBoard(int numrows, int numcols,int mode){
         holes = new Hole[numrows][numcols];
+        this.mode = mode;
+        if(mode == GCPlayAI) {
+            ai = new AI(new AIBoard(standardNumCols, standardNumRows, numDisksToWin));
+        }
     }
 
     //Similar to a mediator pattern, receives the click event from one hole
@@ -49,11 +55,36 @@ public class GameBoard implements GlobalConstants{
                 holes[i][theColumn].filled = turn;
                 holes[i][theColumn].v.setImageResource(colors[turn]);
                 holes[i][theColumn].overlay.setImageResource(overlays[turn]);
+                if(mode == GCPlayAI) {
+                    if(ai != null) {
+                        ai.board.makeMovePlayer(theColumn);
+                        toggleTurn();
+                        int AIColumn = ai.makeTurn();
+                        drawDiskFillForAI(AIColumn);
+                    }
+                    else{
+                        System.out.println("Unexpected error: ai is null");
+                    }
+                }
                 toggleTurn();
+
                 break;
             }
         }
 
+    }
+
+    private void drawDiskFillForAI(int theColumn) {
+        for (int i = standardNumRows - 1; i >= 0 ; i--){
+
+            if(holes[i][theColumn].filled == GCBlack){
+                holes[i][theColumn].filled = turn;
+                holes[i][theColumn].v.setImageResource(colors[turn]);
+                holes[i][theColumn].overlay.setImageResource(overlays[turn]);
+                break;
+            }
+        }
+        checkWin();
     }
 
     //checks if game has been won and by which player
@@ -175,4 +206,11 @@ public class GameBoard implements GlobalConstants{
     public int getTurn() {
         return turn;
     }
+
+
+
+    public boolean hasWinner() {
+        return (winner!=GCBlack);
+    }
 }
+

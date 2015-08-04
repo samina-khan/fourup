@@ -12,22 +12,17 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static android.app.PendingIntent.getActivity;
 
-
-public class PlayPass extends Activity implements View.OnClickListener,GlobalConstants{
-    GameBoard gameboard = new GameBoard(standardNumRows,standardNumCols, GCPlayPass);
+public class PlayAI extends Activity implements View.OnClickListener,GlobalConstants{
+    GameBoard gameboard = new GameBoard(standardNumRows,standardNumCols, GCPlayAI);
     TextView playerRed;
     TextView playerYellow;
     AlertDialog.Builder builder;
@@ -37,7 +32,7 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.playpass);
+        setContentView(R.layout.playai);
         builder = new AlertDialog.Builder(this);
         playerRed = (TextView) findViewById(R.id.PlayerRed);
         playerYellow = (TextView) findViewById(R.id.PlayerYellow);
@@ -198,7 +193,7 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
         if(!gameboard.gameover){
             ImageView i = (ImageView) v;
             gameboard.onclick(i);
-
+/*
             if(gameboard.getTurn() == GCRed){
                 playerRed.setTextColor(this.getResources().getColor(R.color.red));
                 playerYellow.setTextColor(Color.WHITE);
@@ -206,43 +201,54 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
             else{
                 playerRed.setTextColor(Color.WHITE);
                 playerYellow.setTextColor(this.getResources().getColor(R.color.yellow));
-            }
+            }*/
 
-            if(gameboard.checkWin() != GCBlack || gameboard.checkBoardFull()){
-                if(Arbitrator.onGameEnd(gameboard.winner)==KeepGoing) {
-                    builder.setPositiveButton("Play next round", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent passIntent = new Intent(PlayPass.this, PlayPass.class);
-                            startActivity(passIntent);
-                        }
-                    });
-                    AlertDialog alertDialog = builder.create();
-                    if(!Players[gameboard.winner].equals("nobody")){
-                        alertDialog.setTitle("Good Job, "+Players[gameboard.winner]+"!");
-                        //image from http://www.clker.com/cliparts/R/A/q/t/b/L/gold-medal-hi.png
-                        alertDialog.setIcon(R.drawable.medal);
-                    }
-                    else{
-                        alertDialog.setTitle("Aww, we have a tie.");
-                        http://pngimg.com/upload/tie_PNG8179.png
-                        alertDialog.setIcon(R.drawable.tiesmall);
-                    }
-
-                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Players[gameboard.winner]+". Three rounds to declare a winner!");
-                    alertDialog.setCanceledOnTouchOutside(false);
-                    alertDialog.show();
-
-                }
-                else{
-                    /*
-                    Intent endIntent = new Intent(v.getContext(), PlayPass.class);
-                    startActivity(endIntent);*/
-                }
-            }
+            checkWin();
 
         }
     }
 
+    public void checkWin(){
+        if(gameboard.checkWin() != GCBlack || gameboard.checkBoardFull()){
+            if(Arbitrator.onGameEnd(gameboard.winner)==KeepGoing) {
+                builder.setPositiveButton("Play next round", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent passIntent = new Intent(PlayAI.this, PlayAI.class);
+                        startActivity(passIntent);
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+
+                if(Players[gameboard.winner].equals("Player 1")){
+                    alertDialog.setTitle("Good Job, You!");
+                    //image from http://www.clker.com/cliparts/R/A/q/t/b/L/gold-medal-hi.png
+                    alertDialog.setIcon(R.drawable.medal);
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to you. Three rounds to declare a winner!");
+                }
+                else if (Players[gameboard.winner].equals("Player 2")){
+                    alertDialog.setTitle("Aww, you lose!");
+                    //http://pngimg.com/upload/tie_PNG8179.png
+                    alertDialog.setIcon(R.drawable.tiesmall);
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to the evil AI. Three rounds to declare a winner!");
+                }
+                else{
+                    alertDialog.setTitle("Well, well, well... we have a tie.");
+                    //http://pngimg.com/upload/tie_PNG8179.png
+                    alertDialog.setIcon(R.drawable.tiesmall);
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Players[gameboard.winner]+". Three rounds to declare a winner!");
+                }
+
+                alertDialog.setCanceledOnTouchOutside(false);
+                alertDialog.show();
+
+            }
+            else{
+                    /*
+                    Intent endIntent = new Intent(v.getContext(), PlayPass.class);
+                    startActivity(endIntent);*/
+            }
+        }
+    }
     @Override
     public void onBackPressed() {
     }

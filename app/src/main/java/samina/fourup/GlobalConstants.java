@@ -23,6 +23,7 @@ public interface GlobalConstants {
 
     public static final int standardNumRows = 6;
     public static final int standardNumCols = 7;
+    public static final int numDisksToWin = 4;
 
     public static final int maxMatches = 3;
 
@@ -30,6 +31,11 @@ public interface GlobalConstants {
     public static final int RedWins = 0;
     public static final int YellowWins = 1;
     public static final int Tied = 2;
+
+    public static final float WIN_REVENUE = 1f;
+    public static final float LOSE_REVENUE = -1f;
+    public static final float UNCERTAIN_REVENUE = 0f;
+    public static final int MAX_DEPTH = 8;
 
 
 
