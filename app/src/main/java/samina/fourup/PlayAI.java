@@ -228,8 +228,8 @@ public class PlayAI extends Activity implements View.OnClickListener,GlobalConst
                 else if (Players[gameboard.winner].equals("Player 2")){
                     alertDialog.setTitle("Aww, you lose!");
                     //http://pngimg.com/upload/tie_PNG8179.png
-                    alertDialog.setIcon(R.drawable.tiesmall);
-                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to the evil AI. Three rounds to declare a winner!");
+                    alertDialog.setIcon(R.drawable.evil);
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to the Evil Genius. Three rounds to declare a winner!");
                 }
                 else{
                     alertDialog.setTitle("Well, well, well... we have a tie.");
