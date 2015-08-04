@@ -28,7 +28,7 @@ public class GameBoard implements GlobalConstants{
         holes = new Hole[numrows][numcols];
         this.mode = mode;
         if(mode == GCPlayAI) {
-            ai = new AI(new AIBoard(standardNumCols, standardNumRows, numDisksToWin));
+            ai = new AI(new AIBoard(standardNumRows, standardNumCols, numDisksToWin));
         }
     }
 
