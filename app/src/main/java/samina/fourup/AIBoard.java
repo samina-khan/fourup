@@ -1,5 +1,13 @@
 package samina.fourup;
-
+/*
+This class has been taken from another project that demonstrates AI for connect four.
+I've modified the name of the class to make sense to my project but the contents of the class remain unchanged.
+I have used wrappers and modified my other classes to make use of this class.
+The author explains the algorithm online at:
+https://johannes89.wordpress.com/2014/02/09/teaching-a-computer-to-play-connect-four-using-the-minimax-algorithm/
+His whole project is available online at:
+http://www.file-upload.net/download-8602718/connectFour.zip.html
+ */
 public class AIBoard {
 
     /**
