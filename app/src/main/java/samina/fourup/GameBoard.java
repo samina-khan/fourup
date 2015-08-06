@@ -19,7 +19,7 @@ public class GameBoard implements GlobalConstants{
     int[] colors = new int[2];
     int[] overlays = new int[2];
     public boolean gameover = false;
-    AI ai;
+    ArtificialIntelligence ai;
     int mode = GCPlayPass;
 
     private GameBoard(){}
@@ -28,7 +28,7 @@ public class GameBoard implements GlobalConstants{
         holes = new Hole[numrows][numcols];
         this.mode = mode;
         if(mode == GCPlayAI) {
-            ai = new AI(new AIBoard(standardNumRows, standardNumCols, numDisksToWin));
+            ai = new ArtificialIntelligence(new AIBoard(standardNumRows, standardNumCols, numDisksToWin));
         }
     }
 

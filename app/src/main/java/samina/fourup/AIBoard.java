@@ -1,64 +1,28 @@
 package samina.fourup;
 /*
-This class has been taken from another project that demonstrates AI for connect four.
-I've modified the name of the class to make sense to my project but the contents of the class remain unchanged.
-I have used wrappers and modified my other classes to make use of this class.
-The author explains the algorithm online at:
-https://johannes89.wordpress.com/2014/02/09/teaching-a-computer-to-play-connect-four-using-the-minimax-algorithm/
-His whole project is available online at:
-http://www.file-upload.net/download-8602718/connectFour.zip.html
- */
+Copyright (c) 2015 Samina Khanam
+
+This source file is licensed under the "MIT license”.
+Please see the file COPYING in this distribution
+for license terms.
+*/
+//Minimax Algorithm ideas from https://www.udacity.com/course/intro-to-artificial-intelligence--cs271
 public class AIBoard {
 
-    /**
-     * Disc identifiers
-     */
     public final byte NOBODY = 0;
     public final byte PLAYER = 1;
     public final byte AI = 2;
 
-    /**
-     * Height of the board
-     */
     int height;
-
-    /**
-     * Width of the board
-     */
     int width;
-
-    /**
-     * How many stones have to be connected in
-     * order to win
-     */
     int winLength;
 
-    /**
-     * The board that stores the status of every
-     * cell
-     */
     byte[][] board;
 
-    /**
-     * Keeps track of the number of discs stacked
-     * into one column. This is used for
-     * efficiency reasons to be able to quickly
-     * determine if a player can put his disc into
-     * a column.
-     */
     int[] columnCounts;
 
-    /**
-     * Constructor
-     *
-     * @param height
-     * @param width
-     * @param winLength
-     *            How many stones have to be
-     *            connected in order to win
-     */
-    public AIBoard(int height, int width,
-                 int winLength) {
+    public AIBoard(int height, int width,int winLength)
+    {
         this.height = height;
         this.width = width;
         this.winLength = winLength;
@@ -67,64 +31,31 @@ public class AIBoard {
         this.columnCounts = new int[width];
     }
 
-    /**
-     *
-     * @param column
-     *            Number of the column to check.
-     *            Index starts at 0
-     * @return True if any of the players can put
-     *         a disc into the given column
-     */
     public boolean isValidMove(int column) {
         return columnCounts[column] < height;
     }
 
-    /**
-     * Puts player disc into the given column. If
-     * the move is invalid, the board remains
-     * unchanged.
-     *
-     * @param column
-     * @return True if valid move, false
-     *         otherwise.
-     */
+    /* Puts player disc into the given column. No change, if move is invalid.*/
     public boolean makeMovePlayer(int column) {
         return makeMove(column, true);
     }
 
-    /**
-     * Puts AI disc into the given column. If the
-     * move is invalid, the board remains
-     * unchanged.
-     *
-     * @param column
-     * @return
-     */
+    /*Puts AI disc into the given column. No change, if move is invalid.*/
     public boolean makeMoveAI(int column) {
         return makeMove(column, false);
     }
 
-    /**
-     * Removes Player disc from the given column.
-     * If the move is invalid (the top disc is of
-     * another player or there are no discs in
-     * this column) the board remains unchanged.
-     *
-     * @param column
-     * @return True if action was successful
+
+    /* Removes Player disc from the given column. If the move is invalid (the top disc is of
+     * another player or there are no discs in this column) the board remains unchanged.
      */
     public boolean undoMovePlayer(int column) {
         return undoMove(column, true);
     }
 
-    /**
-     * Removes AI disc from the given column. If
-     * the move is invalid (the top disc is of
-     * another player or there are no discs in
-     * this column) the board remains unchanged.
-     *
-     * @param column
-     * @return True if action was successful
+
+    /* Removes AI disc from the given column. If the move is invalid (the top disc is of
+     * another player or there are no discs in this column) the board remains unchanged.
      */
     public boolean undoMoveAI(int column) {
         return undoMove(column, false);
@@ -153,11 +84,6 @@ public class AIBoard {
         return false;
     }
 
-    /**
-     * Returns the width of the board.
-     *
-     * @return
-     */
     public int getWidth() {
         return width;
     }
@@ -188,15 +114,7 @@ public class AIBoard {
         return getWinner() != NOBODY;
     }
 
-    /**
-     * Returns the winner of the current board
-     * state.
-     *
-     * @return Board.NOBODY if there is no winner.
-     *         Board.AI if the AI is the winner.
-     *         Board.PLAYER if the player is the
-     *         winner.
-     */
+
     public byte getWinner() {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y <= height
@@ -293,21 +211,11 @@ public class AIBoard {
         return NOBODY;
     }
 
-    /**
-     * Returns if the player has won.
-     *
-     * @return
-     */
     public boolean playerIsWinner() {
         return getWinner() == PLAYER;
     }
 
-    /**
-     * Returns if the board is full and there is
-     * no winner.
-     *
-     * @return
-     */
+
     public boolean isTie() {
         return isBoardFull()
                 && getWinner() == NOBODY;
