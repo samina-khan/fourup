@@ -35,28 +35,19 @@ public class AIBoard {
         return columnCounts[column] < height;
     }
 
-    /* Puts player disc into the given column. No change, if move is invalid.*/
     public boolean makeMovePlayer(int column) {
         return makeMove(column, true);
     }
 
-    /*Puts AI disc into the given column. No change, if move is invalid.*/
     public boolean makeMoveAI(int column) {
         return makeMove(column, false);
     }
 
-
-    /* Removes Player disc from the given column. If the move is invalid (the top disc is of
-     * another player or there are no discs in this column) the board remains unchanged.
-     */
     public boolean undoMovePlayer(int column) {
         return undoMove(column, true);
     }
 
 
-    /* Removes AI disc from the given column. If the move is invalid (the top disc is of
-     * another player or there are no discs in this column) the board remains unchanged.
-     */
     public boolean undoMoveAI(int column) {
         return undoMove(column, false);
     }

@@ -40,6 +40,10 @@ public class PlayAI extends Activity implements View.OnClickListener,GlobalConst
         TextView playerRedWins = (TextView) findViewById(R.id.PlayerRedWins);
         TextView playerYellowWins = (TextView) findViewById(R.id.PlayerYellowWins);
 
+        playerRed.setText(Arbitrator.Players[GCRed]);
+        playerYellow.setText(Arbitrator.Players[GCYellow]);
+
+
         playerRedWins.setText(Integer.toString(Arbitrator.numRedWon));
         playerYellowWins.setText(Integer.toString(Arbitrator.numYellowWon));
 
@@ -219,13 +223,13 @@ public class PlayAI extends Activity implements View.OnClickListener,GlobalConst
                 });
                 AlertDialog alertDialog = builder.create();
 
-                if(Players[gameboard.winner].equals("Player 1")){
+                if(Arbitrator.Players[gameboard.winner].equals(Arbitrator.Players[GCRed])){
                     alertDialog.setTitle("Good Job, You!");
                     //image from http://www.clker.com/cliparts/R/A/q/t/b/L/gold-medal-hi.png
                     alertDialog.setIcon(R.drawable.medal);
                     alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to you. Three rounds to declare a winner!");
                 }
-                else if (Players[gameboard.winner].equals("Player 2")){
+                else if (Arbitrator.Players[gameboard.winner].equals(Arbitrator.Players[GCYellow])){
                     alertDialog.setTitle("Aww, you lose!");
                     //http://pngimg.com/upload/tie_PNG8179.png
                     alertDialog.setIcon(R.drawable.evil);
@@ -235,7 +239,7 @@ public class PlayAI extends Activity implements View.OnClickListener,GlobalConst
                     alertDialog.setTitle("Well, well, well... we have a tie.");
                     //http://pngimg.com/upload/tie_PNG8179.png
                     alertDialog.setIcon(R.drawable.tiesmall);
-                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Players[gameboard.winner]+". Three rounds to declare a winner!");
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Arbitrator.Players[gameboard.winner]+". Three rounds to declare a winner!");
                 }
 
                 alertDialog.setCanceledOnTouchOutside(false);
@@ -243,9 +247,13 @@ public class PlayAI extends Activity implements View.OnClickListener,GlobalConst
 
             }
             else{
-                    /*
-                    Intent endIntent = new Intent(v.getContext(), PlayPass.class);
-                    startActivity(endIntent);*/
+                    Intent endIntent = new Intent(PlayAI.this, Results.class);
+                    endIntent.putExtra("Player1",Arbitrator.Players[GCRed]);
+                    endIntent.putExtra("Player2",Arbitrator.Players[GCYellow]);
+                    endIntent.putExtra("Score1",Integer.toString(Arbitrator.numRedWon));
+                    endIntent.putExtra("Score2",Integer.toString(Arbitrator.numYellowWon));
+                    Arbitrator.reset();
+                    startActivity(endIntent);
             }
         }
     }

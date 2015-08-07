@@ -45,6 +45,9 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
         TextView playerRedWins = (TextView) findViewById(R.id.PlayerRedWins);
         TextView playerYellowWins = (TextView) findViewById(R.id.PlayerYellowWins);
 
+        playerRed.setText(Arbitrator.Players[GCRed]);
+        playerYellow.setText(Arbitrator.Players[GCYellow]);
+
         playerRedWins.setText(Integer.toString(Arbitrator.numRedWon));
         playerYellowWins.setText(Integer.toString(Arbitrator.numYellowWon));
 
@@ -217,8 +220,8 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
                         }
                     });
                     AlertDialog alertDialog = builder.create();
-                    if(!Players[gameboard.winner].equals("nobody")){
-                        alertDialog.setTitle("Good Job, "+Players[gameboard.winner]+"!");
+                    if(!Arbitrator.Players[gameboard.winner].equals("nobody")){
+                        alertDialog.setTitle("Good Job, "+Arbitrator.Players[gameboard.winner]+"!");
                         //image from http://www.clker.com/cliparts/R/A/q/t/b/L/gold-medal-hi.png
                         alertDialog.setIcon(R.drawable.medal);
                     }
@@ -228,15 +231,21 @@ public class PlayPass extends Activity implements View.OnClickListener,GlobalCon
                         alertDialog.setIcon(R.drawable.tiesmall);
                     }
 
-                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Players[gameboard.winner]+". Three rounds to declare a winner!");
+                    alertDialog.setMessage("Round "+ (Arbitrator.numMatches - 1) +" goes to "+Arbitrator.Players[gameboard.winner]+". Three rounds to declare a winner!");
                     alertDialog.setCanceledOnTouchOutside(false);
                     alertDialog.show();
 
                 }
                 else{
-                    /*
-                    Intent endIntent = new Intent(v.getContext(), PlayPass.class);
-                    startActivity(endIntent);*/
+
+                    Intent endIntent = new Intent(PlayPass.this, Results.class);
+                    endIntent.putExtra("Player1",Arbitrator.Players[GCRed]);
+                    endIntent.putExtra("Player2",Arbitrator.Players[GCYellow]);
+                    endIntent.putExtra("Score1",Integer.toString(Arbitrator.numRedWon));
+                    endIntent.putExtra("Score2",Integer.toString(Arbitrator.numYellowWon));
+                    endIntent.putExtra("Winner",Arbitrator.Players[gameboard.winner]);
+                    Arbitrator.reset();
+                    startActivity(endIntent);
                 }
             }
 

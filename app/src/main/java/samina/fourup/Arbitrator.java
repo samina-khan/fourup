@@ -14,6 +14,8 @@ public class Arbitrator implements GlobalConstants{
     public static int numRedWon;
     public static int numYellowWon;
 
+    public static String[] Players = {"Player 1","Player 2", "nobody"};
+
     public static int onGameEnd(int lastWinner){
         int status = KeepGoing;
 
@@ -34,7 +36,7 @@ public class Arbitrator implements GlobalConstants{
             else{
                 status = Tied;
             }
-            reset();
+            //reset();
         }
         else{
             numMatches++;
@@ -42,10 +44,13 @@ public class Arbitrator implements GlobalConstants{
         return status;
     }
 
-    private static void reset() {
+    public static void reset() {
         numMatches = 1;
         numRedWon = 0;
         numYellowWon = 0;
+
+        String[] array = {"Player 1","Player 2", "nobody"};
+        Players = array;
     }
 
 }
