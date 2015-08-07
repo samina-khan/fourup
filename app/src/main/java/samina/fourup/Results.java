@@ -16,6 +16,7 @@ import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -57,6 +58,16 @@ public class Results extends Activity implements View.OnClickListener,GlobalCons
         else{
             congrats.setText("Muhahahahahha...\nI can't wait to beat you at this again!");
         }
+
+
+        Button nextbtn = (Button) findViewById(R.id.next);
+        nextbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(Results.this, MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
     }
 
 

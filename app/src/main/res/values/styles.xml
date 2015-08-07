@@ -20,4 +20,8 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">35dp</item>
     </style>
+    <style name="CongratsText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">30dp</item>
+    </style>
 </resources>
