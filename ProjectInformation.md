@@ -16,8 +16,12 @@ https://github.com/samina-khan/fourup/issues
 
 
 ####Description:
-This is a game app for the rather well known game of Connect 4. 
-There are two modes of play : One, where two players pass the device, taking turns playing the game. Two, where a player gets to play against the AI. Three rounds to declare a winner, after which you cycle back to the beginning where you get to choose the mode of play.
+This is a game app for the rather well known game of Connect 4.
+The flow of the app is pretty self-explanatory, however I have detailed it below:
+1. The first screen where users choose their opponent by clicking either of two buttons: 'Pass n Play', where they play against a friend taking turns on the same device or 'Play against Evil Genius', where they play against the in-built AI.
+2. The second screen is either the 'Play against AI' or 'Pass 'n' Play' screen depending on the choice made. A 6x7 board is presented to the user and they click on empty slots to indicate which column they wish to drop their disks into. They take turns against their opponent. Three rounds are played on the same 6x7 board to declare a winner on the:
+3. The third screen, which is a 'Results' screen where the the winner of the previous three rounds is declared. If the user clicks the 'Play again' button, they are cycled back to the first screen where they get to choose their opponent again.
+
 
 ####License Information
 This work is available under the "MIT License". Please see the file [COPYING](https://github.com/samina-khan/fourup/blob/master/COPYING) in this distribution for license terms.
