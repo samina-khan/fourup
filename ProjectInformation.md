@@ -40,6 +40,7 @@ Some help for installing apks available at: [APK installation instructions](http
 https://github.com/samina-khan/fourup
 
 Some help for using code from github on Android Studio: [Github to Android Studio](https://www.londonappdeveloper.com/how-to-clone-a-github-project-on-android-studio/)
+
 Download and install Android Studio: [Android Studio](https://developer.android.com/sdk/index.html)
 
 ####References:
