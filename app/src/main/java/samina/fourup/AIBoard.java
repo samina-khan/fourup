@@ -7,6 +7,7 @@ Please see the file COPYING in this distribution
 for license terms.
 */
 //Minimax Algorithm ideas from https://www.udacity.com/course/intro-to-artificial-intelligence--cs271
+//and code ideas with permission from https://johannes89.wordpress.com/2014/02/09/teaching-a-computer-to-play-connect-four-using-the-minimax-algorithm/
 public class AIBoard {
 
     public final byte NOBODY = 0;
@@ -79,27 +80,6 @@ public class AIBoard {
         return width;
     }
 
-    @Override
-    public String toString() {
-        StringBuffer result = new StringBuffer();
-        for (int x = 0; x < width; x++) {
-            result.append((x + 1) + " ");
-        }
-        result.append(System.lineSeparator());
-        for (int y = height - 1; y >= 0; y--) {
-            for (int x = 0; x < width; x++) {
-                if (board[x][y] == PLAYER) {
-                    result.append("X ");
-                } else if (board[x][y] == AI) {
-                    result.append("O ");
-                } else {
-                    result.append(". ");
-                }
-            }
-            result.append(System.lineSeparator());
-        }
-        return result.toString();
-    }
 
     public boolean hasWinner() {
         return getWinner() != NOBODY;
@@ -207,20 +187,5 @@ public class AIBoard {
     }
 
 
-    public boolean isTie() {
-        return isBoardFull()
-                && getWinner() == NOBODY;
-    }
-
-    boolean isBoardFull() {
-        boolean emptyColumnFound = false;
-        for (int x = 0; x < width; x++) {
-            if (columnCounts[x] < height) {
-                emptyColumnFound = true;
-                break;
-            }
-        }
-        return !emptyColumnFound;
-    }
 }
 

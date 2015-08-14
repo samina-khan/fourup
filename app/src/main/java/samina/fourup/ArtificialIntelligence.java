@@ -8,6 +8,7 @@ Please see the file COPYING in this distribution
 for license terms.
 */
 //Minimax Algorithm ideas from https://www.udacity.com/course/intro-to-artificial-intelligence--cs271
+//and code ideas with permission from https://johannes89.wordpress.com/2014/02/09/teaching-a-computer-to-play-connect-four-using-the-minimax-algorithm/
 public class ArtificialIntelligence {
 
 
