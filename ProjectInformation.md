@@ -37,6 +37,8 @@ Some help for using code from github on Android Studio: [Github to Android Studi
 ####References:
 https://developer.android.com
 
+https://www.udacity.com/wiki/cs271/unit14-notes (you need to be enrolled to access this)
+
 https://johannes89.wordpress.com/2014/02/09/teaching-a-computer-to-play-connect-four-using-the-minimax-algorithm/
 
 http://stackoverflow.com/
