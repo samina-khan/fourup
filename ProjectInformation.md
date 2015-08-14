@@ -32,7 +32,7 @@ Some help for installing apks available at: [APK installation instructions](http
 ####Source Code:
 https://github.com/samina-khan/fourup
 
-Some help for using code from github on Android Studio: [Github to Android Studio](https://www.jetbrains.com/idea/help/cloning-a-repository-from-github.html)
+Some help for using code from github on Android Studio: [Github to Android Studio](https://www.londonappdeveloper.com/how-to-clone-a-github-project-on-android-studio/)
 
 ####References:
 https://developer.android.com
