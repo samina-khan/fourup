@@ -25,8 +25,8 @@ This work is available under the "MIT License". Please see the file [COPYING](ht
 ####Installation Pre-requisite:
 Requires Android 5.0 and up.
 
-####Download and install the most recent apk file:
-[FourUp!](https://drive.google.com/file/d/0Bw3fWFONiL7uM3BLVWdvS3BPTUE/view?usp=sharing)
+####Download and install the most recent apk file:[FourUp!](https://drive.google.com/file/d/0Bw3fWFONiL7uM3BLVWdvS3BPTUE/view?usp=sharing)
+
 Some help for installing apks available at: [APK installation instructions](http://www.ubergizmo.com/how-to/how-to-install-apk-files-sideloading-on-android/)
     
 ####Source Code:
