@@ -15,3 +15,5 @@ A good idea to expand the game:
 - Play online: The game could be more fun if people could connect and play on the network against each other.
 
 - Note: This is purely a learning exercise! I do not intend to commercialize this or distribute this in any way. I only intended to learn how to make an android app in a systematic way (given that the first app I made was chaotic madness). 
+
+My contact information: kh.samina@gmail.com
