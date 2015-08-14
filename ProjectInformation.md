@@ -31,7 +31,7 @@ Some help for installing apks available at: [APK installation instructions](http
     
 ####Source Code:
 https://github.com/samina-khan/fourup
-Some help for using code from github on Android Studio:[Github to Android Studio] (https://teamtreehouse.com/library/android-tools/using-git-for-android/pulling-down-github-projects-to-android-studio0
+Some help for using code from github on Android Studio: [Github to Android Studio](https://teamtreehouse.com/library/android-tools/using-git-for-android/pulling-down-github-projects-to-android-studio)
 
 ####References:
 https://developer.android.com
