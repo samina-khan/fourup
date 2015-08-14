@@ -16,4 +16,10 @@ A good idea to expand the game:
 
 - Note: This is purely a learning exercise! I do not intend to commercialize this or distribute this in any way. I only intended to learn how to make an android app in a systematic way (given that the first app I made was chaotic madness). 
 
-My contact information: kh.samina@gmail.com
+
+More information can be found in the file [Project Information](https://github.com/samina-khan/fourup/blob/master/Project%20Information)
+
+Contact: kh.samina@gmail.com
+
+This work is available under the "MIT License". Please see the file [COPYING](https://github.com/samina-khan/fourup/blob/master/COPYING) in this distribution for license terms.
+
